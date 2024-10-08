@@ -20,6 +20,7 @@ const DifficultySelector = () => {
           onClick={() => {
             startGame(difficulty);
           }}
+          key={difficulty}
         >
           <p>{difficulty}</p>
           <StarLevel difficulty={difficulty} />

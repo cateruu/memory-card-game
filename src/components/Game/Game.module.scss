@@ -1,0 +1,45 @@
+@import '../../variables';
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.starWrapper {
+  margin-top: -60px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.leftSideWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+
+.button {
+  background-color: $main;
+  color: $text-secondary;
+  border-radius: $border-radius;
+  outline: none;
+  border: none;
+  height: 44px;
+  padding: 0 20px;
+  margin-left: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: 0.11s ease-in-out;
+
+  &:hover {
+    color: $text;
+  }
+}
