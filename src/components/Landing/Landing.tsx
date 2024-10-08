@@ -4,12 +4,16 @@ import styles from './Landing.module.scss';
 import SavedGame, { Game } from '../SavedGame/SavedGame';
 
 const Landing = () => {
-  const [games, setGames] = useState([]);
+  const [games, setGames] = useState<Game[]>([]);
 
   useEffect(() => {
     const gamesJSON = localStorage.getItem('games');
     if (gamesJSON) {
-      setGames(JSON.parse(gamesJSON));
+      const games = JSON.parse(gamesJSON) as Game[];
+      games.sort(
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+      );
+      setGames(games);
     }
   }, []);
 
