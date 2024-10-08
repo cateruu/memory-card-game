@@ -41,6 +41,9 @@ const WinScreen = () => {
     <div className={styles.container}>
       <ConfettiExplosion />
       <h3 className={styles.header}>YOU WON!</h3>
+      <p>
+        It took you {moves} moves and {time} seconds
+      </p>
     </div>
   );
 };

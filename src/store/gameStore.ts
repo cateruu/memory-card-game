@@ -45,6 +45,7 @@ export const useGameStore = create<GameState>()((set) => ({
       time: 0,
       cards: getGameCards(state.difficulty),
       isWon: false,
+      flippedCards: [],
     })),
   addFlippedCard: (card: CardType) =>
     set((state) => ({ flippedCards: [...state.flippedCards, card] })),

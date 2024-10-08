@@ -9,11 +9,13 @@ interface Props {
 const Card = ({ card }: Props) => {
   const { addFlippedCard, flippedCards } = useGameStore((state) => state);
 
+  const isFlipped = flippedCards.includes(card);
+
   return (
     <div
       className={styles.container}
       onClick={() => {
-        if (flippedCards.length < 2) {
+        if (!card.isMatched && !isFlipped && flippedCards.length < 2) {
           addFlippedCard(card);
         }
       }}
@@ -21,10 +23,7 @@ const Card = ({ card }: Props) => {
       <div
         className={styles.wrapper}
         style={{
-          transform:
-            flippedCards.includes(card) || card.isMatched
-              ? 'rotateY(180deg)'
-              : 'none',
+          transform: isFlipped || card.isMatched ? 'rotateY(180deg)' : 'none',
         }}
       >
         <div className={styles.front}>?</div>

@@ -1,0 +1,29 @@
+@import '../../variables';
+
+.container {
+  width: 100%;
+  height: 54px;
+  border-radius: $border-radius;
+  background: $main;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.sideWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $text;
+  font-size: 14px;
+}
+
+.date {
+  color: $text-secondary;
+}
+
+.stars {
+  align-self: flex-end;
+}
