@@ -3,17 +3,44 @@
 .container {
   width: 100%;
   height: 100%;
-  background: linear-gradient(130deg, #f59e0b, #b45309);
   border-radius: $border-radius;
-  display: grid;
-  place-items: center;
   aspect-ratio: 1/1;
   cursor: pointer;
-  font-size: 40px;
-  color: #92400e;
   font-weight: 700;
+  overflow: hidden;
+  perspective: 1000px;
+}
 
-  &:hover {
-    box-shadow: 0 0 5px rgba(253, 224, 71, 0.5);
-  }
+.wrapper {
+  position: relative;
+  font-size: 40px;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: grid;
+  place-items: center;
+  border-radius: $border-radius;
+}
+
+.front {
+  background: linear-gradient(130deg, #f59e0b, #b45309);
+  color: #92400e;
+}
+
+.back {
+  background: #f59e0b;
+  transform: rotateY(180deg);
+}
+
+.matched {
+  background: #fde047;
 }

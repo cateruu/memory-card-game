@@ -5,7 +5,9 @@ import Board from '../Board/Board';
 import Timer from '../Timer/Timer';
 
 const Game = () => {
-  const { difficulty, moves, resetGame } = useGameStore((state) => state);
+  const { difficulty, moves, resetGame, goToNewGame } = useGameStore(
+    (state) => state
+  );
 
   return (
     <main className={styles.container}>
@@ -17,7 +19,9 @@ const Game = () => {
           <Timer />
           <p>Moves: {moves}</p>
         </div>
-        <button className={`${styles.button}`}>New Game</button>
+        <button className={`${styles.button}`} onClick={goToNewGame}>
+          New Game
+        </button>
         <button className={`${styles.button}`} onClick={resetGame}>
           Reset
         </button>
