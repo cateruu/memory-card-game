@@ -1,16 +1,16 @@
 import { create } from 'zustand';
-import { DifficultiyLevel } from '../constants';
+import { DifficultyLevel } from '../constants';
 import { CardType, getGameCards } from '../utils/getGameCards';
 
 interface GameState {
   isStarted: boolean;
   isWon: boolean;
-  difficulty: DifficultiyLevel;
+  difficulty: DifficultyLevel;
   moves: number;
   time: number;
   cards: CardType[];
   flippedCards: CardType[];
-  startGame: (value: DifficultiyLevel) => void;
+  startGame: (value: DifficultyLevel) => void;
   setTime: () => void;
   resetGame: () => void;
   addFlippedCard: (card: CardType) => void;
@@ -24,7 +24,7 @@ interface GameState {
 export const useGameStore = create<GameState>()((set) => ({
   isStarted: false,
   isWon: false,
-  difficulty: DifficultiyLevel.Easy,
+  difficulty: DifficultyLevel.Easy,
   moves: 0,
   time: 0,
   cards: [],

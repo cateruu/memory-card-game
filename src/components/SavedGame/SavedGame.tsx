@@ -1,4 +1,4 @@
-import { DifficultiyLevel } from '../../constants';
+import { DifficultyLevel } from '../../constants';
 import { getFormattedDate } from '../../utils/getFormattedDate';
 import { getFormattedTime } from '../../utils/getFormattedTime';
 import StarLevel from '../StarLevel/StarLevel';
@@ -7,7 +7,7 @@ import styles from './SavedGame.module.scss';
 export interface Game {
   time: number;
   moves: number;
-  difficulty: DifficultiyLevel;
+  difficulty: DifficultyLevel;
   date: Date;
 }
 

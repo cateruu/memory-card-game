@@ -53,7 +53,7 @@ const Board = () => {
         }}
       >
         {cards.map((card) => (
-          <Card key={card.index} card={card} />
+          <Card key={card.id} card={card} />
         ))}
       </section>
       {isWon && <WinScreen />}

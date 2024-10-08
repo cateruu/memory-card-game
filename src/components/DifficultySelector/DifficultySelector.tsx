@@ -1,12 +1,12 @@
 import styles from './DifficultySelector.module.scss';
 import { useGameStore } from '../../store/gameStore';
 import StarLevel from '../StarLevel/StarLevel';
-import { DifficultiyLevel } from '../../constants';
+import { DifficultyLevel } from '../../constants';
 
-const DIFFICULTIES: DifficultiyLevel[] = [
-  DifficultiyLevel.Easy,
-  DifficultiyLevel.Normal,
-  DifficultiyLevel.Hard,
+const DIFFICULTIES: DifficultyLevel[] = [
+  DifficultyLevel.Easy,
+  DifficultyLevel.Normal,
+  DifficultyLevel.Hard,
 ];
 
 const DifficultySelector = () => {

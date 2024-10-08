@@ -1,8 +1,8 @@
-import { DifficultiyLevel } from '../../constants';
+import { DifficultyLevel } from '../../constants';
 import StarIcon from './StarIcon';
 
 interface Props {
-  difficulty: DifficultiyLevel;
+  difficulty: DifficultyLevel;
 }
 
 const StarLevel = ({ difficulty }: Props) => {
@@ -10,10 +10,10 @@ const StarLevel = ({ difficulty }: Props) => {
     <div>
       <StarIcon color={'#FDE047'} />
       <StarIcon
-        color={difficulty !== DifficultiyLevel.Easy ? '#FDE047' : '#6B7280'}
+        color={difficulty !== DifficultyLevel.Easy ? '#FDE047' : '#6B7280'}
       />
       <StarIcon
-        color={difficulty === DifficultiyLevel.Hard ? '#FDE047' : '#6B7280'}
+        color={difficulty === DifficultyLevel.Hard ? '#FDE047' : '#6B7280'}
       />
     </div>
   );

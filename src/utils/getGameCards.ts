@@ -1,7 +1,7 @@
-import { DifficultiyLevel } from '../constants';
+import { DifficultyLevel } from '../constants';
 
 export interface CardType {
-  index: number;
+  id: number;
   value: string;
   isMatched: boolean;
 }
@@ -30,13 +30,13 @@ const generateCardsArray = (length: number): string[] => {
   return usedCards.concat(usedCards);
 };
 
-export const getGameCards = (difficulty: DifficultiyLevel): CardType[] => {
+export const getGameCards = (difficulty: DifficultyLevel): CardType[] => {
   const [rows, columns] = difficulty.split('x');
   const cards = generateCardsArray((+rows * +columns) / 2);
   const shuffledCards = cards.sort(() => 0.5 - Math.random());
 
   return shuffledCards.map<CardType>((card, idx) => ({
-    index: idx,
+    id: idx,
     value: card,
     isMatched: false,
   }));
